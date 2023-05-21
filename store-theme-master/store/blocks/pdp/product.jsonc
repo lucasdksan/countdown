@@ -99,7 +99,7 @@
       "rowGap": 0
     },
     "children": [
-      "countdown--pdp",
+      "countdown",
       "flex-layout.row#product-name",
       "product-rating-summary",
       "flex-layout.row#list-price-savings",

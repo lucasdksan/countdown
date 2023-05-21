@@ -44,10 +44,6 @@ Para que esse componente seja renderizado, é necessário que o produto esteja r
 2. Verificar se a data atual está dentro do intervalo de funcionamento.
 3. Verificar se o ID do produto está registrado no master data.
 
-*countdown--pdp:
-
-Este componente deve ser implementado na página de produtos e possui todas as características padrão de um countdown. Ele é responsável por exibir uma contagem regressiva que pode ser aplicada aos produtos, adicionando um senso de urgência e destacando ofertas especiais ou prazos limitados.
-
 ## Customization
 
 `Para aplicar personalizações de CSS neste e em outros blocos, siga as instruções fornecidas na receita em [Usando CSS Handles para personalização da loja](https://vtex.io/docs/recipes/style/using-css-handles-for -store-personalização).`

@@ -16,7 +16,7 @@ const Countdown = () => {
                 return data.json();
             })
             .then((response) => {
-                if (response.lenght !== 0) {
+                if (response.length !== 0) {
                     let data = {
                         productId: response[0].productId,
                         duration: response[0].duration,
@@ -25,7 +25,6 @@ const Countdown = () => {
                         initialDate: response[0].initialDate,
                         currentDuration: response[0].duration
                     };
-
                     validationAndSetTime(currentProductId, setDataCount, data, response[0].duration)
                 } else {
                     setDataCount(null);
@@ -38,12 +37,13 @@ const Countdown = () => {
     if (typeof dataCount === "string") return null;
 
     const { active, productId, duration, finalDate, initialDate } = dataCount;
-
     const { isValid } = validationRateTime(finalDate, initialDate);
 
     if (!isValid) return null;
     if (!active) return null;
     if (productId !== currentProductId) return null;
+
+    console.log(duration, dataCount)
 
     return <CountdownController timer={duration} productKey={`${currentProductId}`} />;
 }
