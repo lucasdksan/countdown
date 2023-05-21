@@ -40,9 +40,9 @@ Este componente tem a responsabilidade de criar uma contagem regressiva para um 
 
 Para que esse componente seja renderizado, é necessário que o produto esteja registrado no master data. Além disso, o componente realiza algumas validações antes de exibir a contagem regressiva, como por exemplo:
 
--> Verificar se o produto está ativo.
--> Verificar se a data atual está dentro do intervalo de funcionamento.
--> Verificar se o ID do produto está registrado no master data.
+1. Verificar se o produto está ativo.
+2. Verificar se a data atual está dentro do intervalo de funcionamento.
+3. Verificar se o ID do produto está registrado no master data.
 
 *countdown--pdp:
 
@@ -56,8 +56,8 @@ As classes deste componente que permitem customização estão listadas na tabel
 
 | CSS Handles |  description |
 | ----------- |  ----------- | 
-| `countdown__body` | `Classe para personalizar o visual do contador regressivo, permitindo a modificação do 'corpo'. Isso possibilita a alteração do background-color e outros elementos visuais.` |
-| `countdown__text` | `Classe para modificar as propriedades da frase "Termina em". Obs: Lembrando que a frase está dentro de um elemento p` |
-| `countdown__dates` | `Classe da Div que contém o tempo total da contagem regressiva.` |
-| `countdown__date` | `Classe para personalizar os tempo (horas, minutos e segundos)` |
-| `countdown__dots` | `Classe para customizar o ":" que divide o tempo entre horas, minutos e segundos` |
+| `countdown__body` | Classe para personalizar o visual do contador regressivo, permitindo a modificação do 'corpo'. Isso possibilita a alteração do background-color e outros elementos visuais. |
+| `countdown__text` | Classe para modificar as propriedades da frase "Termina em". Obs: Lembrando que a frase está dentro de um elemento p |
+| `countdown__dates` | Classe da Div que contém o tempo total da contagem regressiva. |
+| `countdown__date` | Classe para personalizar os tempo (horas, minutos e segundos) |
+| `countdown__dots` | Classe para customizar o ":" que divide o tempo entre horas, minutos e segundos |
