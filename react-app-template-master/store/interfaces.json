@@ -1,0 +1,8 @@
+{
+    "countdown": {
+        "component": "Countdown"
+    },
+    "countdown--pdp": {
+        "component": "CountdownPDP"
+    }
+}

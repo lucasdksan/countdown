@@ -1,0 +1,26 @@
+.countdown__body {
+    height: auto;
+    display: flex;
+}
+
+.countdown__text {
+    color: black;
+}
+
+.countdown__dates {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown__date {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown__dots {
+    color: black;
+}
