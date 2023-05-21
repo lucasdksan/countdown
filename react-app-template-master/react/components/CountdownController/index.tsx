@@ -33,9 +33,7 @@ const CountdownController = ({ timer, productKey }: CountdownControllerInterface
 
         controller();
 
-        return () => {
-            clearTimeout(countdownTimeout!);
-        };
+        return () => clearTimeout(countdownTimeout!);
     }, [timer, productKey]);
 
     if (timeLeft.hrs <= 0 && timeLeft.min <= 0 && timeLeft.seg <= 0) return null;

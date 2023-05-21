@@ -32,16 +32,12 @@ const Countdown = () => {
             });
     }, []);
 
-    if (dataCount === "end") return null;
-    if (!dataCount) return null;
-    if (typeof dataCount === "string") return null;
+    if (dataCount === "end" || !dataCount || typeof dataCount === "string") return null;
 
     const { active, productId, duration, finalDate, initialDate } = dataCount;
     const { isValid } = validationRateTime(finalDate, initialDate);
 
-    if (!isValid) return null;
-    if (!active) return null;
-    if (productId !== currentProductId) return null;
+    if (!isValid || !active || productId !== currentProductId) return null;
 
     return <CountdownController timer={duration} productKey={`${currentProductId}`} />;
 }
