@@ -38,9 +38,7 @@ const CountdownController = ({ timer, productKey }: CountdownControllerInterface
         };
     }, [timer, productKey]);
 
-    if (timeLeft.hrs <= 0 && timeLeft.min <= 0 && timeLeft.seg <= 0) {
-        return null;
-    }
+    if (timeLeft.hrs <= 0 && timeLeft.min <= 0 && timeLeft.seg <= 0) return null;
 
     return <CountdownContainer timer={timeLeft} />;
 };
