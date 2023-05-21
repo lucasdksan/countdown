@@ -43,8 +43,6 @@ const Countdown = () => {
     if (!active) return null;
     if (productId !== currentProductId) return null;
 
-    console.log(duration, dataCount)
-
     return <CountdownController timer={duration} productKey={`${currentProductId}`} />;
 }
 
