@@ -27,8 +27,8 @@ Observação: O componente não está estilizado.
 | ------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------- | 
 | `active`     | `boolean`       | Responsavel por ativar o countdown do produto.                                                                          | `ativo?`        |
 | `duration`   | `Varchar 100`   | Campo para colocar o tempo da contagem regressiva. Obs: padrão "00:00:00" onde é dividio em hora, minuto e segundo.     | `Duração`       |
-| `finalDate`  | `Varchar 100`   | Campo para colocar a data final de funcionamento.                                                                       | `Data Final`    |
-| `initialDate`| `Varchar 100`   | Campo para colocar a data inical de funcionamento.                                                                      | `Data Inicial`  |
+| `finalDate`  | `Varchar 100`   | Campo para colocar a data final de funcionamento. Obs: padrão "dd/mm/aaaa hh:mm"                                                                      | `Data Final`    |
+| `initialDate`| `Varchar 100`   | Campo para colocar a data inical de funcionamento. Obs: padrão "dd/mm/aaaa hh:mm"                                                                     | `Data Inicial`  |
 | `productId`  | `Varchar 100`   | O id do produto que vai receber o countdown.                                                                            | `Id do Produto` |
 
 
