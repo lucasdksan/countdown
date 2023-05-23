@@ -1,0 +1,30 @@
+.banner_countdown__container {}
+
+.banner_countdown__body {
+    height: auto;
+    display: flex;
+}
+
+.banner_countdown__text {
+    color: black;
+}
+
+.banner_countdown__dates {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_countdown__date {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_countdown__dots {
+    color: black;
+}
+
+.banner_countdown__btn {}
