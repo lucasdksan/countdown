@@ -23,7 +23,7 @@ const schema = {
         link: {
             type: "string",
             title: "Link da promoção",
-            description: "Link para redirecionaento",
+            description: "Link para redirecionamento (/exemplo)",
             default: ""
         },
         finalDate: {

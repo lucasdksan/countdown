@@ -1,4 +1,4 @@
-import localStorageInterface from "../types/LocalStorageInterface";
+import localStorageInterface from "../../../types/LocalStorageInterface";
 import { getTimer, setFullTimer } from "./localStorageTimer";
 
 const validationAndSetTime = (key: string, setDataCount: (data: any) => void, data: localStorageInterface, duration: string) => {

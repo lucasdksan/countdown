@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import CountdownContainer from "../CountdownContainer";
 import { validationTimer } from "../../libs/validationTimer";
-import calcTimer from "../../libs/calcTimer";
 import futureDateFuntion from "../../libs/futureDateFuntion";
-import CountdownControllerInterface from "../../types/CountdownControllerInterface";
+import calcTimer from "../../../../libs/calcTimer";
+import CountdownControllerInterface from "../../../../types/CountdownControllerInterface";
 
 const CountdownController = ({ timer, productKey }: CountdownControllerInterface) => {
     const [timeLeft, setTimeLeft] = useState({ hrs: 0, min: 0, seg: 0 });

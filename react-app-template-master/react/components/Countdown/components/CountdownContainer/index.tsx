@@ -1,5 +1,5 @@
 import React from "react";
-import CountdownContainerInterface from "../../types/CountdownContainerInterface";
+import CountdownContainerInterface from "../../../../types/CountdownContainerInterface";
 import styles from "./styles.css";
 
 const CountdownContainer = ({ timer }: CountdownContainerInterface) => {

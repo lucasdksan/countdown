@@ -1,4 +1,4 @@
-import localStorageInterface from "../../types/LocalStorageInterface";
+import localStorageInterface from "../../../../types/LocalStorageInterface";
 
 const setFullTimer = (data: localStorageInterface, key: string) => {
     const dataString = JSON.stringify(data);

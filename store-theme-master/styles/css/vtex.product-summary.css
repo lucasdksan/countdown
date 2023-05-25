@@ -40,3 +40,7 @@
 .image {
   border-radius: 0.25rem;
 }
+
+.countdown__body {
+  width: 100%;
+}

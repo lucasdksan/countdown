@@ -5,10 +5,9 @@ const getTimer = (key: string) => {
 
         if (dataAllString !== null && dataAllString !== "") {
             dataObj = JSON.parse(dataAllString);
+
             return dataObj;
-        } else {
-            return null
-        }
+        } else return null;
     }
 
     return null;

@@ -1,5 +1,5 @@
 import React from "react";
-import BannerCountdownContainerInterface from "../../types/BannerCountdownContainerInterface";
+import BannerCountdownContainerInterface from "../../../../types/BannerCountdownContainerInterface";
 import styles from "./styles.css";
 
 const BannerCountdownContainer = ({ timer, link, title }: BannerCountdownContainerInterface) => {

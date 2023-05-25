@@ -1,8 +1,8 @@
 import React from "react";
-import schema from "./libs/schema";
 import BannerCountdownInteface from "../../types/BannerCountdownInteface";
+import schema from "./libs/schema";
 import { validationRateTime } from "../../libs/validationRateTimer";
-import BannerCountdownController from "../BannerCountdownController";
+import BannerCountdownController from "./components/BannerCountdownController";
 
 const BannerCountdown = ({ active, duration, finalDate, initialDate, link, title }: BannerCountdownInteface) => {
     const { isValid } = validationRateTime(finalDate, initialDate);
