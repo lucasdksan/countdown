@@ -36,14 +36,14 @@ Observação: Os componentes não estão estilizados.
 | `finalDate`  | `Varchar 100`   | Campo para colocar a data final de funcionamento. Obs: padrão "dd/mm/aaaa hh:mm"                                                                      | `Data Final`    |
 | `initialDate`| `Varchar 100`   | Campo para colocar a data inical de funcionamento. Obs: padrão "dd/mm/aaaa hh:mm"                                                                     | `Data Inicial`  |
 | `productId`  | `Varchar 100`   | O id do produto que vai receber o countdown.                                                                            | `Id do Produto` |
-
-### Campos do Banner Countdown Site editor
+| `collection` | `Varchar 50` | Campo para colocar o id da coleção | `Coleção` |
+### Campos do Banner Countdown no Site editor
 
 | Camp |  Description | Format |
 | ---- |  ----------- | ------ |
 | Duração do timer | Tempo de duração. | 00:00:00:00 (Dias:Horas:Minutos:Segundos). |
 | Título | Nome da promoção, opcional. | Simples texto. |
-| Link da promoção | Url para o redirecionamento. | /"nomde do link" |
+| Link da promoção | Url para o redirecionamento. | /"nome do link" |
 | Data final | Campo para colocar a data final de funcionamento. | 27/11/2020 00:00 (Dia-Mes-Ano Horas:Minutos). |
 | Data inicial | Campo para colocar a data inical de funcionamento. | 23/11/2020 08:00 (Dia-Mes-Ano Horas:Minutos). |
 | Nome de identificação | Nome para identificar para caso tenha mais de um (Importante colocar). | Home |
@@ -62,9 +62,11 @@ Para que esse componente seja renderizado, é necessário que o produto esteja r
 2. Verificar se a data atual está dentro do intervalo de funcionamento.
 3. Verificar se o ID do produto está registrado no master data.
 
-* countdown Banner:
+* banner-countdown:
 
 ![Media Placeholder](../github/BannerCountdown.png)
+
+Este componente tem as mesmas responsabilidades do contador regressivo nos produtos. No entanto, é recomendado que ele seja mais destacado na página do site, em vez de nas prateleiras como na imagem acima. Uma das maiores diferenças reside na forma de alterar o tempo de duração e outras informações. No caso, é possível realizar todas as alterações diretamente no site editor da loja.
 
 ## Customização
 
@@ -91,3 +93,5 @@ As classes do componente banner-countdown que permitem customização estão lis
 | `banner_countdown__date` | Classe para personalizar os tempo (horas, minutos e segundos) |
 | `banner_countdown__dots` | Classe para customizar o ":" que divide o tempo entre horas, minutos e segundos |
 | `banner_countdown__btn` | Classe para alterar o css do botão que redireciona para o local da promoção. |
+
+Observação: Para estilizar o componente, é recomendado criar um arquivo CSS com o nome "agencian1.countdown" e realizar todas as edições nele.
