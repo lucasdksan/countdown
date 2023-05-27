@@ -4,6 +4,7 @@ type createObjectDataInterface = {
     finalDate: string;
     initialDate: string;
     productId: string;
+    collection: string;
 }
 
 export default createObjectDataInterface;

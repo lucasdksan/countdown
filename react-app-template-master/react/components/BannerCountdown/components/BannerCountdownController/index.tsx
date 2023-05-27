@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import BannerCountdownControllerInterface from "../../../../types/BannerCountdownControllerInterface";
 import BannerCountdownContainer from "../BannerCountdownContainer";
+import BannerCountdownControllerInterface from "../../../../types/BannerCountdownControllerInterface";
 import futureFullDateFuntion from "../../libs/futureFullDateFuntion";
 import calcTimer from "../../../../libs/calcTimer";
+import { setLocalStorageBanner } from "../../libs/localStorageBanner";
 
-const BannerCountdownController = ({ duration, link, title }: BannerCountdownControllerInterface) => {
+const BannerCountdownController = ({ duration, link, title, name }: BannerCountdownControllerInterface) => {
     const [timeLeft, setTimeLeft] = useState({ day: 0, hrs: 0, min: 0, seg: 0 });
 
     useEffect(() => {
@@ -19,8 +20,11 @@ const BannerCountdownController = ({ duration, link, title }: BannerCountdownCon
             if (diff <= 0) return;
 
             const { days, hours, minutes, seconds } = calcTimer(diff);
+            const stringDate = `${String(days).padStart(2, "0")}:${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 
             setTimeLeft({ day: days, hrs: hours, min: minutes, seg: seconds });
+            setLocalStorageBanner(stringDate, name);
+
             countdownTimeout = setTimeout(controller, 1000);
         }
         controller();

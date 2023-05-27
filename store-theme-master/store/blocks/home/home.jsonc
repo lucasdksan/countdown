@@ -10,6 +10,8 @@
       "rich-text#shelf-title",
       "flex-layout.row#shelf",
       "info-card#home",
+      "rich-text#collection",
+      "flex-layout.row#collection",
       "rich-text#question",
       "rich-text#link",
       "newsletter"
@@ -52,8 +54,24 @@
       "blockClass": "shelfTitle"
     }
   },
+  "rich-text#collection": {
+    "props": {
+      "text": "## Apenas Um Teste",
+      "blockClass": "shelfTitle"
+    }
+  },
   "flex-layout.row#shelf": {
     "children": ["list-context.product-list#demo1"]
+  },
+  "flex-layout.row#collection": {
+    "children": ["list-context.product-list#collection"]
+  },
+  "list-context.product-list#collection": {
+    "blocks": ["product-summary.shelf#collection"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "collection": "149"
+    }
   },
   "list-context.product-list#demo1": {
     "blocks": ["product-summary.shelf"],

@@ -7,7 +7,6 @@ import CountdownControllerInterface from "../../../../types/CountdownControllerI
 
 const CountdownController = ({ timer, productKey }: CountdownControllerInterface) => {
     const [timeLeft, setTimeLeft] = useState({ hrs: 0, min: 0, seg: 0 });
-
     useEffect(() => {
         let countdownTimeout: ReturnType<typeof setTimeout> | null = null;
 
@@ -32,7 +31,6 @@ const CountdownController = ({ timer, productKey }: CountdownControllerInterface
         };
 
         controller();
-
         return () => clearTimeout(countdownTimeout!);
     }, [timer, productKey]);
 

@@ -10,18 +10,24 @@ O componente React consiste em um timer interno que decrementa a cada segundo, a
 
 Além disso, o componente React pode ser estilizado de acordo com as necessidades de design da prateleira de e-commerce. Isso inclui a definição de estilos para a div que contém o tempo total do countdown, bem como a personalização de cores, fontes e outros elementos visuais para garantir uma experiência esteticamente agradável e coerente com o restante do site.
 
-Observação: O componente não está estilizado.
+Observação: Os componentes não estão estilizados.
 
-![Media Placeholder](../github/Front.png)
+## Configurações 
 
-## Configuration 
+* countdown
 
 1. Crie uma tabela no master data com o Acrônimo `CD` e nome Countdown, além disso criar os campos listados na tabela abaixo.
 2. Adicionando o aplicativo como uma dependência de tema no arquivo manifest.json;
-3. Declarar o "countdown" nas prateleiras.
-4. Declarar o "countdown--pdp" na página de produto.
+3. Declarar o "countdown" nas prateleiras que deseja.
 
-### `Campos` da tabela
+* banner-countdown
+
+1. Adicionar o componente no local desejado.
+2. Acessar o site editor.
+3. Localizar o N1 - Banner Countdown.
+4. Alterar as informações.
+
+### Campos da tabela
 
 | Camp         | Type            | Description                                                                                                             | Display Name    |
 | ------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------- | 
@@ -31,10 +37,22 @@ Observação: O componente não está estilizado.
 | `initialDate`| `Varchar 100`   | Campo para colocar a data inical de funcionamento. Obs: padrão "dd/mm/aaaa hh:mm"                                                                     | `Data Inicial`  |
 | `productId`  | `Varchar 100`   | O id do produto que vai receber o countdown.                                                                            | `Id do Produto` |
 
+### Campos do Banner Countdown Site editor
 
-## Description
+| Camp |  Description | Format |
+| ---- |  ----------- | ------ |
+| Duração do timer | Tempo de duração. | 00:00:00:00 (Dias:Horas:Minutos:Segundos). |
+| Título | Nome da promoção, opcional. | Simples texto. |
+| Link da promoção | Url para o redirecionamento. | /"nomde do link" |
+| Data final | Campo para colocar a data final de funcionamento. | 27/11/2020 00:00 (Dia-Mes-Ano Horas:Minutos). |
+| Data inicial | Campo para colocar a data inical de funcionamento. | 23/11/2020 08:00 (Dia-Mes-Ano Horas:Minutos). |
+| Nome de identificação | Nome para identificar para caso tenha mais de um (Importante colocar). | Home |
+
+## Descrições
 
 * countdown:
+
+![Media Placeholder](../github/Front.png)
 
 Este componente tem a responsabilidade de criar uma contagem regressiva para um produto registrado no master data. A contagem regressiva é armazenada no localStorage, permitindo que ela seja mantida mesmo quando o usuário navega entre as páginas da loja. Esse componente deve ser aplicado aos produtos exibidos nas prateleiras.
 
@@ -44,11 +62,15 @@ Para que esse componente seja renderizado, é necessário que o produto esteja r
 2. Verificar se a data atual está dentro do intervalo de funcionamento.
 3. Verificar se o ID do produto está registrado no master data.
 
-## Customization
+* countdown Banner:
+
+![Media Placeholder](../github/BannerCountdown.png)
+
+## Customização
 
 `Para aplicar personalizações de CSS neste e em outros blocos, siga as instruções fornecidas na receita em [Usando CSS Handles para personalização da loja](https://vtex.io/docs/recipes/style/using-css-handles-for -store-personalização).`
 
-As classes deste componente que permitem customização estão listadas na tabela abaixo: 
+As classes do componente countdown que permitem customização estão listadas na tabela abaixo: 
 
 | CSS Handles |  description |
 | ----------- |  ----------- | 
@@ -57,3 +79,15 @@ As classes deste componente que permitem customização estão listadas na tabel
 | `countdown__dates` | Classe da Div que contém o tempo total da contagem regressiva. |
 | `countdown__date` | Classe para personalizar os tempo (horas, minutos e segundos) |
 | `countdown__dots` | Classe para customizar o ":" que divide o tempo entre horas, minutos e segundos |
+
+As classes do componente banner-countdown que permitem customização estão listadas na tabela abaixo:
+
+| CSS Handles |  description |
+| ----------- |  ----------- | 
+| `banner_countdown__container` | Classe para alterar o container. Adequado para mudar a cor de fundo |
+| `banner_countdown__body` | Classe para personalizar o visual do contador regressivo, permitindo a modificação do 'corpo'. Isso possibilita a alteração do background-color e outros elementos visuais. |
+| `banner_countdown__text` | Classe para modificar as propriedades da frase "Termina em". Obs: Lembrando que a frase está dentro de um elemento p |
+| `banner_countdown__dates` | Classe da Div que contém o tempo total da contagem regressiva. |
+| `banner_countdown__date` | Classe para personalizar os tempo (horas, minutos e segundos) |
+| `banner_countdown__dots` | Classe para customizar o ":" que divide o tempo entre horas, minutos e segundos |
+| `banner_countdown__btn` | Classe para alterar o css do botão que redireciona para o local da promoção. |

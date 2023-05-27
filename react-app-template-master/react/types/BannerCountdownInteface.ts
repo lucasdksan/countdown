@@ -5,6 +5,7 @@ type BannerCountdownInteface = {
     link: string;
     finalDate: string;
     initialDate: string;
+    name: string;
 }
 
 export default BannerCountdownInteface;

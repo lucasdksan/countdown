@@ -4,24 +4,22 @@ import CountdownController from "./components/CountdownController/index";
 import { validationRateTime } from "../../libs/validationRateTimer";
 import validationAndSetTime from "./libs/validationAndSetTime";
 import createObjectData from "./libs/createObjectData";
-import schema from "./libs/schema";
 import localStorageInterface from "../../types/LocalStorageInterface";
-import CountdownInterface from "../../types/CountdownInterface";
 
-const Countdown = ({ collection, useCollection }: CountdownInterface) => {
+const Countdown = () => {
     const [dataCount, setDataCount] = useState<localStorageInterface | null | string>(null);
     const product = useProduct()?.product;
     const currentProductId = product?.productId;
-    const url = !useCollection ? `/api/dataentities/CD/search?_fields=productId,duration,active,finalDate,initialDate&_where=productId=${currentProductId}` : `/api/dataentities/CD/search?_fields=duration,active,finalDate,initialDate,collection&_where=collection=${collection}`
+    console.log("Product: ", product);
 
     useEffect(() => {
-        fetch(url)
+        fetch(`/api/dataentities/CD/search?_fields=productId,duration,active,finalDate,initialDate&_where=productId=${currentProductId}`)
             .then((data) => data.json())
             .then((response) => {
                 if (response.length !== 0) {
                     let data = createObjectData(response);
 
-                    validationAndSetTime(currentProductId, setDataCount, data, response[0].duration)
+                    validationAndSetTime(currentProductId, setDataCount, data, response[0].duration);
                 } else setDataCount(null);
             });
     }, []);
@@ -35,7 +33,5 @@ const Countdown = ({ collection, useCollection }: CountdownInterface) => {
 
     return <CountdownController timer={duration} productKey={`${currentProductId}`} />;
 }
-
-Countdown.schema = schema;
 
 export default Countdown;

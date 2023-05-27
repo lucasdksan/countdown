@@ -1,15 +1,18 @@
 import React from "react";
-import BannerCountdownInteface from "../../types/BannerCountdownInteface";
+import BannerCountdownController from "./components/BannerCountdownController";
 import schema from "./libs/schema";
 import { validationRateTime } from "../../libs/validationRateTimer";
-import BannerCountdownController from "./components/BannerCountdownController";
+import { validationData } from "./libs/validationData";
+import BannerCountdownInteface from "../../types/BannerCountdownInteface";
 
-const BannerCountdown = ({ active, duration, finalDate, initialDate, link, title }: BannerCountdownInteface) => {
+const BannerCountdown = ({ active, duration, finalDate, initialDate, link, title, name }: BannerCountdownInteface) => {
     const { isValid } = validationRateTime(finalDate, initialDate);
 
     if (!isValid || !active) return null;
 
-    return <BannerCountdownController duration={duration} link={link} title={title} />;
+    const timer = validationData(duration, name);
+
+    return <BannerCountdownController duration={timer} link={link} title={title} name={name} />;
 }
 
 BannerCountdown.schema = schema;

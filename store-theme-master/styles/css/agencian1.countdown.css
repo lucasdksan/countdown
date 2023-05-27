@@ -1,0 +1,68 @@
+.banner_countdown__container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F3E99;
+}
+
+.banner_countdown__body {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.banner_countdown__text,
+.banner_countdown__date,
+.banner_countdown__btn,
+.banner_countdown__dots {
+    font-family: San Francisco,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.banner_countdown__date {
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    color: #0F3E99;
+    font-size: 20px;
+}
+
+.banner_countdown__btn {
+    text-decoration: none;
+}
+
+.countdown__body {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F3E99;
+    gap: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.countdown__text,
+.countdown__date {
+    font-family: San Francisco,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
