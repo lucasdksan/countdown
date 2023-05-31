@@ -5,9 +5,9 @@ const validationCollection = (collection: string, collectionsArr: { id: string, 
         if (e.id === collection) collectionExist = true;
     });
 
-    if (!collectionExist) return false;
+    if (!collectionExist) return { isValidCollection: false };
 
-    return true;
+    return { isValidCollection: true };
 }
 
 export { validationCollection };

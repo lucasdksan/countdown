@@ -1,28 +1,28 @@
-.countdown__body {
+.countdown_collection__body {
     height: auto;
     display: flex;
 }
 
-.countdown__text,
-.countdown__text_p,
-.countdown__text_span {
+.countdown_collection__text,
+.countdown_collection__text_p,
+.countdown_collection__text_span {
     color: black;
 }
 
-.countdown__dates {
+.countdown_collection__dates {
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.countdown__date {
+.countdown_collection__date {
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.countdown__dots {
+.countdown_collection__dots {
     color: black;
 }

@@ -9,17 +9,17 @@ const BannerCountdownContainer = ({ timer, link, title }: BannerCountdownContain
                 {
                     (title !== "") &&
                     <div className={styles["banner_countdown__text"]}>
-                        <p>{title}</p>
+                        <p className={styles["banner_countdown__text_p"]}>{title}</p>
                     </div>
                 }
                 <div className={styles["banner_countdown__dates"]}>
-                    <div className={styles["banner_countdown__date"]}><p>{String(timer.day).padStart(2, "0")}</p></div>
+                    <div className={styles["banner_countdown__date"]}><p className={styles["banner_countdown__text_p"]}>{String(timer.day).padStart(2, "0")}</p></div>
                     <span className={styles["banner_countdown__dots"]}>:</span>
-                    <div className={styles["banner_countdown__date"]}><p>{String(timer.hrs).padStart(2, "0")}</p></div>
+                    <div className={styles["banner_countdown__date"]}><p className={styles["banner_countdown__text_p"]}>{String(timer.hrs).padStart(2, "0")}</p></div>
                     <span className={styles["banner_countdown__dots"]}>:</span>
-                    <div className={styles["banner_countdown__date"]}><p>{String(timer.min).padStart(2, "0")}</p></div>
+                    <div className={styles["banner_countdown__date"]}><p className={styles["banner_countdown__text_p"]}>{String(timer.min).padStart(2, "0")}</p></div>
                     <span className={styles["banner_countdown__dots"]}>:</span>
-                    <div className={styles["banner_countdown__date"]}><p>{String(timer.seg).padStart(2, "0")}</p></div>
+                    <div className={styles["banner_countdown__date"]}><p className={styles["banner_countdown__text_p"]}>{String(timer.seg).padStart(2, "0")}</p></div>
                 </div>
                 {
                     (link !== "") &&

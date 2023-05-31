@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import CountdownContainer from "../CountdownContainer";
-import { validationTimer } from "../../libs/validationTimer";
+import CountdownCollectionContainer from "../CountdownCollectionContainer";
+import CountdownCollectionControllerInterface from "../../../../types/CountdownCollectionControllerInterface";
 import futureDateFuntion from "../../../../libs/futureDateFuntion";
+import validationTimerController from "../../libs/validationTimerController";
 import calcTimer from "../../../../libs/calcTimer";
-import CountdownControllerInterface from "../../../../types/CountdownControllerInterface";
 
-const CountdownController = ({ timer, productKey }: CountdownControllerInterface) => {
+const CountdownCollectionController = ({ collection, timer }: CountdownCollectionControllerInterface) => {
     const [timeLeft, setTimeLeft] = useState({ hrs: 0, min: 0, seg: 0 });
+
     useEffect(() => {
         let countdownTimeout: ReturnType<typeof setTimeout> | null = null;
 
@@ -18,25 +19,25 @@ const CountdownController = ({ timer, productKey }: CountdownControllerInterface
             const diff = futureDate.getTime() - currentDate.getTime();
 
             if (diff <= 0) {
-                validationTimer(0, 0, 0, productKey);
+                validationTimerController(0, 0, 0, collection);
                 return;
             }
 
             let { hours, minutes, seconds } = calcTimer(diff);
 
             setTimeLeft({ hrs: hours, min: minutes, seg: seconds });
-            validationTimer(hours, minutes, seconds, productKey);
+            validationTimerController(hours, minutes, seconds, collection);
 
             countdownTimeout = setTimeout(controller, 1000);
-        };
+        }
 
         controller();
         return () => clearTimeout(countdownTimeout!);
-    }, [timer, productKey]);
+    }, [timer, collection]);
 
     if (timeLeft.hrs <= 0 && timeLeft.min <= 0 && timeLeft.seg <= 0) return null;
 
-    return <CountdownContainer timer={timeLeft} />;
-};
+    return <CountdownCollectionContainer timer={timeLeft} />;
+}
 
-export default CountdownController;
+export default CountdownCollectionController;

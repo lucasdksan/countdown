@@ -10,7 +10,6 @@ const Countdown = () => {
     const [dataCount, setDataCount] = useState<localStorageInterface | null | string>(null);
     const product = useProduct()?.product;
     const currentProductId = product?.productId;
-    console.log("Product: ", product);
 
     useEffect(() => {
         fetch(`/api/dataentities/CD/search?_fields=productId,duration,active,finalDate,initialDate&_where=productId=${currentProductId}`)

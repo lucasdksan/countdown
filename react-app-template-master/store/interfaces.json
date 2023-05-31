@@ -4,5 +4,8 @@
     },
     "banner-countdown": {
         "component": "BannerCountdown"
+    },
+    "countdown-collection": {
+        "component": "CountdownCollection"
     }
 }

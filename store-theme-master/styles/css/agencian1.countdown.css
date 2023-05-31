@@ -16,7 +16,8 @@
 .banner_countdown__text,
 .banner_countdown__date,
 .banner_countdown__btn,
-.banner_countdown__dots {
+.banner_countdown__dots,
+.banner_countdown__text_p {
     font-family: San Francisco,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
     font-weight: 400;
     text-transform: none;
@@ -39,6 +40,10 @@
     font-size: 20px;
 }
 
+.banner_countdown__date .banner_countdown__text_p {
+    color: #0F3E99;
+}
+
 .banner_countdown__btn {
     text-decoration: none;
 }
@@ -56,7 +61,36 @@
 }
 
 .countdown__text,
-.countdown__date {
+.countdown__date,
+.countdown__text_p,
+.countdown__text_span {
+    font-family: San Francisco,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.countdown_collection__body {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F3E99;
+    gap: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.countdown_collection__text,
+.countdown_collection__date,
+.countdown_collection__text_p,
+.countdown_collection__text_span {
     font-family: San Francisco,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
     font-weight: 400;
     text-transform: none;

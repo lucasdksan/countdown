@@ -22,7 +22,7 @@
       "flex-layout.row#selling-price-savings",
       "product-installments#summary",
       "add-to-cart-button",
-      "countdown"
+      "countdown-collection"
     ]
   },
   "flex-layout.col#productRating": {

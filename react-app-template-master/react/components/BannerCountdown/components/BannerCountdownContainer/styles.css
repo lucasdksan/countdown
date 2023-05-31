@@ -5,7 +5,8 @@
     display: flex;
 }
 
-.banner_countdown__text {
+.banner_countdown__text,
+.banner_countdown__text_p {
     color: black;
 }
 

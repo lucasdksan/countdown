@@ -48,6 +48,17 @@ Observação: Os componentes não estão estilizados.
 | Data inicial | Campo para colocar a data inical de funcionamento. | 23/11/2020 08:00 (Dia-Mes-Ano Horas:Minutos). |
 | Nome de identificação | Nome para identificar para caso tenha mais de um (Importante colocar). | Home |
 
+Observação: Os campos Título e Link para promoção são compos opcionais.
+
+### Campos do Countdown Collection no Site editor
+
+| Camp |  Description | Format |
+| ---- |  ----------- | ------ |
+| Exibir conteúdo por coleção? | Ativar o countdown por coleção.. | falso. |
+| Id da coleção | Colocar o id da coleção que vai receber o countdown. | Código da coleção. |
+
+Observação: Para ativer acionar o campo exibir conteúdo por coleção.
+
 ## Descrições
 
 * countdown:
@@ -68,6 +79,20 @@ Para que esse componente seja renderizado, é necessário que o produto esteja r
 
 Este componente tem as mesmas responsabilidades do contador regressivo nos produtos. No entanto, é recomendado que ele seja mais destacado na página do site, em vez de nas prateleiras como na imagem acima. Uma das maiores diferenças reside na forma de alterar o tempo de duração e outras informações. No caso, é possível realizar todas as alterações diretamente no site editor da loja.
 
+* countdown-collection:
+
+Este componente tem a responsabilidade de criar uma contagem regressiva para produtos de uma coleção registrada no master data. A contagem regressiva é armazenada no localStorage, permitindo que ela seja mantida mesmo quando o usuário navega entre as páginas da loja. Esse componente deve ser aplicado aos produtos exibidos nas prateleiras.
+
+Para que esse componente seja renderizado, é necessário que a coleção esteja registrada no master data. Além disso, o componente realiza algumas validações antes de exibir a contagem regressiva, como por exemplo:
+
+1. Verificar se a coleção está ativo.
+2. Verificar se a data atual está dentro do intervalo de funcionamento.
+3. Verificar se o ID da coleção está registrado no master data.
+
+A tabela é compartilhada com as informações de contagem regressiva, a única diferença é que você deve preencher o campo de coleta em vez do campo id do produto.
+
+![Media Placeholder](../github/Front_2.png)
+
 ## Customização
 
 `Para aplicar personalizações de CSS neste e em outros blocos, siga as instruções fornecidas na receita em [Usando CSS Handles para personalização da loja](https://vtex.io/docs/recipes/style/using-css-handles-for -store-personalização).`
@@ -78,6 +103,8 @@ As classes do componente countdown que permitem customização estão listadas n
 | ----------- |  ----------- | 
 | `countdown__body` | Classe para personalizar o visual do contador regressivo, permitindo a modificação do 'corpo'. Isso possibilita a alteração do background-color e outros elementos visuais. |
 | `countdown__text` | Classe para modificar as propriedades da frase "Termina em". Obs: Lembrando que a frase está dentro de um elemento p |
+| `countdown__text_p` | Classe para customizar o elemento p que contém os textos. |
+| `countdown__text_span` | Classe para customizar o elemento span |
 | `countdown__dates` | Classe da Div que contém o tempo total da contagem regressiva. |
 | `countdown__date` | Classe para personalizar os tempo (horas, minutos e segundos) |
 | `countdown__dots` | Classe para customizar o ":" que divide o tempo entre horas, minutos e segundos |
@@ -89,9 +116,22 @@ As classes do componente banner-countdown que permitem customização estão lis
 | `banner_countdown__container` | Classe para alterar o container. Adequado para mudar a cor de fundo |
 | `banner_countdown__body` | Classe para personalizar o visual do contador regressivo, permitindo a modificação do 'corpo'. Isso possibilita a alteração do background-color e outros elementos visuais. |
 | `banner_countdown__text` | Classe para modificar as propriedades da frase "Termina em". Obs: Lembrando que a frase está dentro de um elemento p |
+| `banner_countdown__text_p` | Classe para modificar os elementos p das divs `banner_countdown__text` |
 | `banner_countdown__dates` | Classe da Div que contém o tempo total da contagem regressiva. |
 | `banner_countdown__date` | Classe para personalizar os tempo (horas, minutos e segundos) |
 | `banner_countdown__dots` | Classe para customizar o ":" que divide o tempo entre horas, minutos e segundos |
 | `banner_countdown__btn` | Classe para alterar o css do botão que redireciona para o local da promoção. |
+
+As classes do componente countdown-collection que permitem customização estão listadas na tabela abaixo: 
+
+| CSS Handles |  description |
+| ----------- |  ----------- | 
+| `countdown_collection__body` | Classe para personalizar o visual do contador regressivo, permitindo a modificação do 'corpo'. Isso possibilita a alteração do background-color e outros elementos visuais. |
+| `countdown_collection__text` | Classe para modificar as propriedades da frase "Termina em". Obs: Lembrando que a frase está dentro de um elemento p |
+| `countdown_collection__text_p` | Classe para customizar o elemento p que contém os textos. |
+| `countdown_collection__text_span` | Classe para customizar o elemento span |
+| `countdown_collection__dates` | Classe da Div que contém o tempo total da contagem regressiva. |
+| `countdown_collection__date` | Classe para personalizar os tempo (horas, minutos e segundos) |
+| `countdown_collection__dots` | Classe para customizar o ":" que divide o tempo entre horas, minutos e segundos |
 
 Observação: Para estilizar o componente, é recomendado criar um arquivo CSS com o nome "agencian1.countdown" e realizar todas as edições nele.
