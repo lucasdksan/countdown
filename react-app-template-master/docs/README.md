@@ -27,6 +27,12 @@ Observação: Os componentes não estão estilizados.
 3. Localizar o N1 - Banner Countdown.
 4. Alterar as informações.
 
+* countdown-collection
+
+1. Crie uma tabela no master data com o Acrônimo `CD` e nome Countdown, além disso criar os campos listados na tabela abaixo.
+2. Adicionando o aplicativo como uma dependência de tema no arquivo manifest.json;
+3. Declarar o "countdown-collection" nas prateleiras que deseja.
+
 ### Campos da tabela
 
 | Camp         | Type            | Description                                                                                                             | Display Name    |
